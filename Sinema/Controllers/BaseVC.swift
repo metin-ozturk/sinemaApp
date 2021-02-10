@@ -11,6 +11,8 @@ class BaseVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(self.navigationController?.navigationBar.frame.size)
     }
     
     override func viewWillAppear(_ animated: Bool) {

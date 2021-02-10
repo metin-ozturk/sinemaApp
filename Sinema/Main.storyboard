@@ -322,7 +322,7 @@
                                                 </constraints>
                                             </imageView>
                                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-42-61O">
-                                                <rect key="frame" x="0.0" y="16" width="414" height="44"/>
+                                                <rect key="frame" x="0.0" y="32" width="414" height="44"/>
                                                 <items>
                                                     <navigationItem title="Title" id="zTY-qv-vjN"/>
                                                 </items>
@@ -341,7 +341,7 @@
                                             <constraint firstItem="Zev-FD-uaf" firstAttribute="leading" secondItem="SlO-Nv-7lU" secondAttribute="leading" id="Vch-gs-TJ1"/>
                                             <constraint firstItem="ctP-r1-bmy" firstAttribute="centerY" secondItem="Zev-FD-uaf" secondAttribute="centerY" constant="50" id="ZyJ-4L-Mum"/>
                                             <constraint firstAttribute="trailing" secondItem="Zev-FD-uaf" secondAttribute="trailing" id="a6b-br-wkz"/>
-                                            <constraint firstItem="1dM-42-61O" firstAttribute="top" secondItem="SlO-Nv-7lU" secondAttribute="top" constant="16" id="ldk-fE-xiG"/>
+                                            <constraint firstItem="1dM-42-61O" firstAttribute="top" secondItem="SlO-Nv-7lU" secondAttribute="top" constant="32" id="ldk-fE-xiG"/>
                                             <constraint firstItem="1dM-42-61O" firstAttribute="leading" secondItem="SlO-Nv-7lU" secondAttribute="leading" id="xHs-jU-Xkr"/>
                                         </constraints>
                                     </view>

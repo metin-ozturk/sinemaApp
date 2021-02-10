@@ -28,7 +28,7 @@ class MoviesCVCell: UICollectionViewCell {
         if (isShowingCurrentMovies) {
             movieDetailLabel.text = detailText
         } else {
-            let retrievedDate = detailDate!
+            let retrievedDate = detailDate ?? Date()
             let calendar = Calendar.current
             let retrievedDateBeginning = calendar.startOfDay(for: retrievedDate)
             let currentDateBeginning = calendar.startOfDay(for: Date())

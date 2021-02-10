@@ -35,8 +35,6 @@ class MovieFeedVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("MovieFeedVC Loaded")
         // Do any additional setup after loading the view.
         adjustSegmentedControlColor()
         movieStatusSegmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
