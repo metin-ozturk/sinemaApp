@@ -5,4 +5,9 @@
 //  Created by Metin Ozturk on 9.02.2021.
 //
 
-import Foundation
+import UIKit
+
+class MovieDetailContentCell: UICollectionViewCell {
+    @IBOutlet weak var movieDetailTitleLabel: UILabel!    
+    @IBOutlet weak var movieDetailContentLabel: UILabel!
+}

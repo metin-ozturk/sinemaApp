@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum MovieType : String {
+    case CurrentlyPlaying = "now_playing"
+    case ComingSoon = "upcoming"
+    case Popular = "popular"
+}
