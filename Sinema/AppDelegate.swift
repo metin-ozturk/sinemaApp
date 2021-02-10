@@ -14,11 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().contentMode = .scaleToFill
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "customNavigationBarImage"), for: .default)
         
         UITabBar.appearance().barTintColor = UIColor.clear
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().backgroundImage = UIImage(named: "customNavigationBarImage")
+        UITabBar.appearance().contentMode = .scaleToFill
         UITabBar.appearance().tintColor = .white
         UITabBar.appearance().unselectedItemTintColor = .white
 

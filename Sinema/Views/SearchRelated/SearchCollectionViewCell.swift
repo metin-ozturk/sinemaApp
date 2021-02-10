@@ -15,6 +15,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imdbLogoWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var imdbLogoTrailingConstraint: NSLayoutConstraint!
+
     
     func update(with movie: Movie) {
         movieImageView.image = movie.moviePosterImage

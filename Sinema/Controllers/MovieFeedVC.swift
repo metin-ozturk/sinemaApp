@@ -33,6 +33,8 @@ class MovieFeedVC: BaseVC {
     
     private var selectedMovieIndex = -1
     
+    private var cvFlowLayout = UICollectionViewFlowLayout()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -52,13 +54,15 @@ class MovieFeedVC: BaseVC {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        cvFlowLayout.invalidateLayout()
+        DispatchQueue.main.async {
+            self.moviesCollectionView.reloadData()
+            self.moviesCollectionView.layoutIfNeeded()
+        }
+        
     }
     
     @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -117,6 +121,7 @@ class MovieFeedVC: BaseVC {
     }
     
     private func initializeMoviesCollectionView() {
+        moviesCollectionView.collectionViewLayout = cvFlowLayout
         moviesCollectionView.delegate = self
         moviesCollectionView.dataSource = self
         moviesCollectionView.register(UINib(nibName: "MoviesCVCell", bundle: nil), forCellWithReuseIdentifier: "MoviesCVCellIdentifier")

@@ -13,8 +13,10 @@ class MovieDetailCVHeaderCell: UICollectionViewCell {
     @IBOutlet weak var movieDetailImdbLogoImageView: UIImageView!
     
     func update(title: String, vote: Float) {
-        movieDetailImdbVoteLabel.text = "\(vote)"
         movieDetailHeaderTitleLabel.text = title
+
+        movieDetailImdbVoteLabel.text = vote != 0 ? "\(vote)" : ""
+        movieDetailImdbLogoImageView.isHidden = vote != 0 ? false : true
     }
     
 }
